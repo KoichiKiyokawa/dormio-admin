@@ -3,7 +3,7 @@ import Link from 'next/link'
 import * as MU from '@material-ui/core'
 import MenuIcon from '@material-ui/icons/Menu'
 import { connect } from 'react-redux'
-import { sidebarSlice } from '../../store/sidebar'
+import { sidebarSlice } from '@/store/sidebar'
 
 type Props = {
   toggle: () => void
