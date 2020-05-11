@@ -5,6 +5,7 @@ extends:
   - 'eslint:recommended'
   - 'plugin:react/recommended'
   - 'plugin:@typescript-eslint/eslint-recommended'
+  - 'plugin:prettier/recommended'
 globals:
   Atomics: readonly
   SharedArrayBuffer: readonly
@@ -18,18 +19,6 @@ plugins:
   - react
   - '@typescript-eslint'
 rules:
-  indent:
-    - error
-    - 2
-  linebreak-style:
-    - error
-    - unix
-  quotes:
-    - error
-    - single
-  semi:
-    - error
-    - never
   react/prop-types: 0
   # https://github.com/typescript-eslint/typescript-eslint/blob/master/packages/eslint-plugin/docs/rules/no-unused-vars.md
   no-unused-vars: off
