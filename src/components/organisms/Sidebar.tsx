@@ -1,17 +1,17 @@
-import React from'react'
+import React from 'react'
 import * as MU from '@material-ui/core'
-import {connect} from 'react-redux'
+import { connect } from 'react-redux'
 
-import {sidebarSlice} from '../../store/sidebar'
+import { sidebarSlice } from '../../store/sidebar'
 
 type Props = {
-  open:boolean,
+  open: boolean
   toggle: () => void
 }
 
-const Sidebar : React.FC<Props> = props => (
+const Sidebar: React.FC<Props> = props => (
   <MU.SwipeableDrawer open={props.open} onClose={props.toggle} onOpen={() => {}}>
-    <div style={{width: 250}}>
+    <div style={{ width: 250 }}>
       <MU.List>
         <MU.ListItemText primary="hoge" />
       </MU.List>
@@ -20,6 +20,6 @@ const Sidebar : React.FC<Props> = props => (
 )
 
 export default connect(
-  (state) => ({ open: state.sidebar.open }),
-  (dispatch) => ({ toggle: () => dispatch(sidebarSlice.actions.toggle()) })
+  state => ({ open: state.sidebar.open }),
+  dispatch => ({ toggle: () => dispatch(sidebarSlice.actions.toggle()) })
 )(Sidebar)
