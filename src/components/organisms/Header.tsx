@@ -20,7 +20,9 @@ const Header: React.FC<Props> = props => (
           Dormio管理者
         </MU.Typography>
       </Link>
-      <MU.Button color="inherit">Login</MU.Button>
+      <Link href="/login">
+        <MU.Button color="inherit">Login</MU.Button>
+      </Link>
     </MU.Toolbar>
   </MU.AppBar>
 )
