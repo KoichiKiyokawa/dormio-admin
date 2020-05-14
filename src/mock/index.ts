@@ -1,3 +1,6 @@
+import range from 'lodash/range'
+import moment from 'moment'
+
 export function getMockResidents(): Resident[] {
   return [
     { roomNumber: 101, name: '佐藤あけし' },
@@ -21,4 +24,12 @@ export function getMockResidents(): Resident[] {
     { roomNumber: 209, name: '鈴木らけし' },
     { roomNumber: 210, name: '鈴木わけし' }
   ]
+}
+
+export function getMockNotices(): Notice[] {
+  return range(1, 10 + 1).map(i => ({
+    title: `お知らせ${i}`,
+    body: `${i}日前、こんなことがありました`,
+    date: moment().add(-i, 'days').toDate()
+  }))
 }

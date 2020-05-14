@@ -15,9 +15,14 @@ const Sidebar: React.FC<Props> = props => (
   <MU.SwipeableDrawer open={props.open} onClose={props.toggle} onOpen={() => {}}>
     <div style={{ width: 250 }} role="presentation">
       <MU.List>
-        <MU.ListItem button>
-          <MU.ListItemText primary="hoge" />
-        </MU.ListItem>
+        <Link href="/notices">
+          <MU.ListItem button onClick={props.toggle}>
+            <MU.ListItemIcon>
+              <MUI.Mail />
+            </MU.ListItemIcon>
+            <MU.ListItemText primary="お知らせ一覧" />
+          </MU.ListItem>
+        </Link>
         <MU.Divider />
         <Link href="/setting">
           <MU.ListItem button onClick={props.toggle}>
