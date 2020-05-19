@@ -1,5 +1,5 @@
 import range from 'lodash/range'
-import moment from 'moment'
+import dayjs from 'dayjs'
 
 export function getMockResidents(): Resident[] {
   return [
@@ -28,8 +28,9 @@ export function getMockResidents(): Resident[] {
 
 export function getMockNotices(): Notice[] {
   return range(1, 10 + 1).map(i => ({
+    id: `${i}`,
     title: `お知らせ${i}`,
     body: `${i}日前、こんなことがありました`,
-    date: moment().add(-i, 'days').toDate()
+    date: dayjs().add(-i, 'day').toDate()
   }))
 }
