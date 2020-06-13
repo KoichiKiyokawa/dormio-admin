@@ -37,7 +37,4 @@ const Sidebar: React.FC<Props> = props => (
   </MU.SwipeableDrawer>
 )
 
-export default connect(
-  state => ({ open: state.sidebar.open }),
-  { toggle: sidebarSlice.actions.toggle }
-)(Sidebar)
+export default connect(state => ({ open: state.sidebar.open }), { toggle: sidebarSlice.actions.toggle })(Sidebar)
