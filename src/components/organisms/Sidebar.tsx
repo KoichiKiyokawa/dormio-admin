@@ -39,5 +39,5 @@ const Sidebar: React.FC<Props> = props => (
 
 export default connect(
   state => ({ open: state.sidebar.open }),
-  dispatch => ({ toggle: () => dispatch(sidebarSlice.actions.toggle()) })
+  { toggle: sidebarSlice.actions.toggle }
 )(Sidebar)
